@@ -9,6 +9,7 @@
                     <td>
                         <div class="o_horizontal_separator">Work Details</div>
                     </td>
+                <field name="date_of_joining"/>
                 <field name="skills_name"/>
                 <field name="project_name"/>
                 <field name="project_start_date"/>
@@ -17,6 +18,7 @@
                 <field name="pm"/>
                 <field name="ppm"/>
                 <field name="experience"/>
+                <field name="total_experience" readonly="1"/>
                 </field>     
             </field>
         </record>
