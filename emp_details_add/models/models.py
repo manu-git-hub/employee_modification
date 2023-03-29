@@ -10,4 +10,4 @@ class HrEmployee(models.Model):
     hr_poc = fields.Char(string='HR POC')
     pm = fields.Char(string='PM')
     ppm = fields.Char(string='PPM')
-    experience = fields.Float(string='Experience When Joining')
+    experience = fields.Float(string='Experience')
