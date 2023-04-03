@@ -19,8 +19,18 @@
                 <field name="ppm"/>
                 <field name="experience"/>
                 <field name="total_experience" readonly="1"/>
-                </field>     
-            </field>
+                <tr>
+                    <td colspan="2" style="width: 100%;">
+                        <div class="o_horizontal_separator">Mentor</div>
+                    </td>
+                </tr>
+                <field name="mentor_ids" widget="many2many_tags" options="{'no_create': True}" string="Mentors"/>
+                        <field name="mentee_ids" widget="many2many_tags" options="{'no_create': True}" string="Mentees"/>
+                </field>    
+             </field>  
         </record>
     </data>
 </odoo>
+
+   
+
