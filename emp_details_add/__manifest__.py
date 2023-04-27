@@ -8,15 +8,20 @@
     'description': """
     This module adds new fields to the Employee model, including:
         - Skills/Area
+        - Project Status
         - Project Name
         - Project Start Date
         - Project End Date
         - HR POC
         - PM
         - PPM
-        - Experience    """,
+        - Buddy
+        - Experience    
+        
+        
+        - Secondary Email """,
 
-    'author': "Leuwint Technology",
+    'author': "Leuwint Technologies",
     'website': "https://www.leuwint.com/",
 
     # Categories can be used to filter modules in modules listing

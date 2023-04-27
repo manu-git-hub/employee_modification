@@ -11,12 +11,94 @@
                     </td>
                 <field name="date_of_joining"/>
                 <field name="skills_name"/>
-                <field name="project_name"/>
-                <field name="project_start_date"/>
-                <field name="project_end_date"/>
+                <!-- <field name="project_name"/>
+                <field name="project_status"/> -->
+                <div class="oe_title">
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <div style="flex: 1;">
+                            <label for="project_name" style="font-weight: bold;"/>
+                            <p class="oe_form_label">
+                                <field name="project_name"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_title1">
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <div style="flex: 1;">
+                            <label for="project_name1" style="font-weight: bold;"/>
+                                <p class="oe_form_label">
+                                    <field name="project_name1"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_title">
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <div style="flex: 1;">
+                            <label for="project_status" style="font-weight: bold;"/>
+                            <p class="oe_form_label">
+                                <field name="project_status"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_title1">
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <div style="flex: 1;">
+                            <label for="project_status1" style="font-weight: bold;"/>
+                                <p class="oe_form_label">
+                                    <field name="project_status1"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_title">
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <div style="flex: 1;">
+                            <label for="project_start_date" style="font-weight: bold;"/>
+                            <p class="oe_form_label">
+                                <field name="project_start_date"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_title1">
+                    <div style="display: flex; justify-content: space-between; width: 100%;">
+                        <div style="flex: 1;">
+                            <label for="project_start_date1" style="font-weight: bold;"/>
+                            <p class="oe_form_label">
+                                    <field name="project_start_date1"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_title">
+                    <div style="display: flex; justify-content: space-between; width:100%;">
+                        <div style="flex: 1;">
+                            <label for="project_end_date" style="font-weight: bold;"/>
+                                <p class="oe_form_label">
+                                    <field name="project_end_date"/>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_title">
+                    <div style="display: flex; justify-content: space-between; width:100%">
+                        <div style="flex: 1;">
+                            <label for="project_end_date1" style="font-weight: bold;"/>
+                                <p class="oe_form_label">
+                                    <field name="project_end_date1"/>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <field name="project_start_date"/>
+                <field name="project_end_date"/> -->
                 <field name="hr_poc"/>
                 <field name="pm"/>
                 <field name="ppm"/>
+                <field name="buddy"/>
                 <field name="experience"/>
                 <field name="total_experience" readonly="1"/>
                 <tr>
@@ -24,10 +106,20 @@
                         <div class="o_horizontal_separator">Mentor</div>
                     </td>
                 </tr>
-                <field name="mentor_ids" widget="many2many_tags" options="{'no_create': True}" string="Mentors"/>
+                        <field name="mentor_ids" widget="many2many_tags" options="{'no_create': True}" string="Mentors"/>
                         <field name="mentee_ids" widget="many2many_tags" options="{'no_create': True}" string="Mentees"/>
                 </field>    
              </field>  
+        </record>
+        <record model="ir.ui.view" id="hr_employee_form_inherit_second_email">
+            <field name="name">hr.employee.form.inherit.second_email</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+            <field name="work_email" position="after">
+                <field name="second_email" widget="email" default="someone@example.com"/>
+            </field>
+            </field>
         </record>
     </data>
 </odoo>
