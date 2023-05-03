@@ -44,7 +44,7 @@ class HrEmployee(models.Model):
                 raise ValidationError(" Project's start date must precede its end date ")
             
     @api.constrains('project_start_date1', 'project_end_date1')
-    def _check_project_dates(self):
+    def _check_secondary_project_dates(self):
         for employee in self:
             if employee.project_start_date1 and employee.project_end_date1 and \
                 employee.project_end_date1 < employee.project_start_date1:
