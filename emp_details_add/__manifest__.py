@@ -39,6 +39,8 @@
         'views/work_location_views.xml',
         
     ],
+    'license': 'LGPL-3',
+    'application':True,
     'installable': True,
     'auto_install'  : False,
    # only loaded in demonstration mode
